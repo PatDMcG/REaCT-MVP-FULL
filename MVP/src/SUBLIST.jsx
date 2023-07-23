@@ -1,6 +1,6 @@
 import SubR from "./SubR"
 import { useState, useEffect } from 'react'
-const [subList, setSubList] = useState([]) //{Title: "test_1",Complete: true,Parent: 1},{Title: "test_2",Complete: false,Parent: 1},{Title: "test_3",Complete: false,Parent: 2}
+const [subList, setSubList] = useState([{Title: "test_1",Complete: true,Parent: 1}]) //{Title: "test_1",Complete: true,Parent: 1},{Title: "test_2",Complete: false,Parent: 1},{Title: "test_3",Complete: false,Parent: 2}
 
 
 
