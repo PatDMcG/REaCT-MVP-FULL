@@ -4,7 +4,7 @@
   "description": "",
   "main": "API.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": " cd .. && npm run build && cd API && node API.js"
   },
   "keywords": [],
   "author": "",
