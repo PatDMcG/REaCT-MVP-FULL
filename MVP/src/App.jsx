@@ -19,9 +19,10 @@ function App() {
       console.log(returned)
       
   }
-  setAPI("https://react-mvp-full.onrender.com/goals/main")
+  
 
   useEffect(() => {
+    setAPI("https://react-mvp-full.onrender.com/goals/main")
     GetData(API)
   }, [])
   
