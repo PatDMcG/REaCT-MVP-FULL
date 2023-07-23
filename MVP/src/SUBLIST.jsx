@@ -8,7 +8,7 @@ function SUBLIST({master}) {
   async function GetData2 (input)
   {
     console.log(input)
-    let resp = await fetch(`${input}`)
+    let resp = await fetch(input)
     let data = await resp.json()
     console.log(data)
     setSubList(data)
