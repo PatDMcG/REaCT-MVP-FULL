@@ -19,7 +19,7 @@ function App() {
     console.log(input)
     let resp = await fetch(`${input}`)
     let data = await resp.json()
-    setReturned(data)
+    returned.push(data)
     console.log(data)
     console.log(returned)
       
