@@ -19,7 +19,7 @@ function App() {
  async function GetData (input)
   {
     console.log(input)
-    let resp = await fetch(`${input}`)
+    let resp = await fetch(input)
     let data = await resp.json()
     setMasterList(data)
       
