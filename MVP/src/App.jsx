@@ -10,6 +10,7 @@ import NewSub from './NewSub.jsx'
 import Progress from './Progress.jsx'
 
 function App() {
+  var returned = []
   // const [count, setCount] = useState(0)
   //const [API, setAPI] = useState("")
   const [masterList, setMasterList] = useState([{Title: "Test",id: 1},{Title: "Test2",id: 2}])
@@ -20,7 +21,8 @@ function App() {
     console.log(input)
     let resp = await fetch(`${input}`)
     let data = await resp.json()
-    let returned = data
+    returned = data
+    return returned
       
   }
   let API ="https://react-mvp-full.onrender.com/goals/main"
