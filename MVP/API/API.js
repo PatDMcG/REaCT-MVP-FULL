@@ -5,8 +5,7 @@ const path = require("path");
 dotenv.config();
 const app = express();
 app.use(express.json());
-app.get("/", express.static("../MVP/dist"));
-console.log(path.join(__dirname, "../MVP/dist"))
+app.use(express.static("dist"));
 const PORT = process.env.PORT;
 const connectionString = process.env.DATABASE_URL;
 const pool = new Pool({

@@ -5,9 +5,9 @@ function SUBLIST({subList, master}) {
         <>
         {subList.map((sub) => {
           return (
-          <>
+          <div className="SUBLIST">
             <SubR sub={sub} master={master} key={sub.id}/>
-            </>
+            </div>
           )
         })}
             </>
