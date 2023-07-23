@@ -44,7 +44,7 @@ function App() {
             <>
             <Progress/>
             <div className='MAIN'>
-          <h1>{master.Title}</h1>
+          <h1>{master.title}</h1>
           <div>
           <DeleteMain/>
           <UpdateMain/>

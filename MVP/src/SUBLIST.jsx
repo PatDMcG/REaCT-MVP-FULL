@@ -21,7 +21,8 @@ function SUBLIST({master}) {
   useEffect(() => {
     GetData2(API)
   }, [])
-
+    if(subList)
+    {
     return (
 
       
@@ -37,5 +38,10 @@ function SUBLIST({master}) {
       )
 
     }
+    else
+{
+return (<h1>SUB FAILURE</h1>)
+}
+}
     
     export default SUBLIST

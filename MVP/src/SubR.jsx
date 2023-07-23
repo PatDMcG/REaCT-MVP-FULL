@@ -5,11 +5,11 @@ import UpdateSub from './UpdateSub'
 
 
 function SubR({sub, master}) {
-      if(sub.Parent == master)  
+      if(sub.parent == master)  
     return (
       <div className='SUBGOAL'>
             <p>
-            {sub.Title}
+            {sub.title}
             </p>
             <DeleteSub/>
             <UpdateSub/>
