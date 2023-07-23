@@ -4,7 +4,7 @@
   "description": "",
   "main": "API.js",
   "scripts": {
-    "start": " cd .. && npm run build && cd API && node API.js"
+    "start": " node API.js"
   },
   "keywords": [],
   "author": "",
