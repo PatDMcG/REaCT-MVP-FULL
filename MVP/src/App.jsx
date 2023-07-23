@@ -13,7 +13,7 @@ function App() {
   var returned = []
   // const [count, setCount] = useState(0)
   //const [API, setAPI] = useState("")
-  const [masterList, setMasterList] = useState([{Title: "Test",id: 1},{Title: "Test2",id: 2}])
+  const [masterList, setMasterList] = useState([]) //[{Title: "Test",id: 1},{Title: "Test2",id: 2}]
   const [subList, setSubList] = useState([{Title: "test_1",Complete: true,Parent: 1},{Title: "test_2",Complete: false,Parent: 1},{Title: "test_3",Complete: false,Parent: 2}])
  // const [returned, setReturned] = useState([])
  async function GetData (input)
@@ -21,15 +21,13 @@ function App() {
     console.log(input)
     let resp = await fetch(`${input}`)
     let data = await resp.json()
-    returned = data
-    return returned
+    setMasterList(data)
       
   }
   let API ="https://react-mvp-full.onrender.com/goals/main"
   const BASE ="https://react-mvp-full.onrender.com/goals"
   useEffect(() => {
     GetData(API)
-    setMasterList(returned)
   }, [])
   
   return (
