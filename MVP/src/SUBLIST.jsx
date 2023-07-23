@@ -19,7 +19,7 @@ function SUBLIST({master}) {
   const BASE ="https://react-mvp-full.onrender.com/goals"
   useEffect(() => {
     GetData2(API)
-  }, [])
+  }, [subList])
 
     return (
 

@@ -29,7 +29,7 @@ function App() {
   useEffect(() => {
     GetData(API)
     
-  }, [])
+  }, [masterList])
   
   return (
   
