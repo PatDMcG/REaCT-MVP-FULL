@@ -7,7 +7,7 @@ import './App.css'
 
 function App() {
   // const [count, setCount] = useState(0)
-  const [API, setAPI] = useState("")
+  //const [API, setAPI] = useState("")
   const [masterList, setMasterList] = useState([{Title: "Test",id: 1},{Title: "Test2",id: 2}])
   const [subList, setSubList] = useState([{Title: "test_1",Complete: true,Parent: 1},{Title: "test_2",Complete: false,Parent: 1},{Title: "test_3",Complete: false,Parent: 2}])
   const [returned, setReturned] = useState([])
@@ -22,7 +22,7 @@ function App() {
   
 
   useEffect(() => {
-    setAPI("https://react-mvp-full.onrender.com/goals/main")
+    var API ="https://react-mvp-full.onrender.com/goals/main"
     GetData(API)
   }, [])
   
