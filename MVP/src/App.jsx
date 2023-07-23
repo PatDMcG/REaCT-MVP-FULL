@@ -7,33 +7,29 @@ import './App.css'
 import DeleteMain from './DeleteMain.jsx'
 import UpdateMain from './UpdateMain.jsx'
 import NewSub from './NewSub.jsx'
+import Progress from './Progress.jsx'
 
 function App() {
   // const [count, setCount] = useState(0)
   //const [API, setAPI] = useState("")
   const [masterList, setMasterList] = useState([{Title: "Test",id: 1},{Title: "Test2",id: 2}])
   const [subList, setSubList] = useState([{Title: "test_1",Complete: true,Parent: 1},{Title: "test_2",Complete: false,Parent: 1},{Title: "test_3",Complete: false,Parent: 2}])
-  const [returned, setReturned] = useState([])
+ // const [returned, setReturned] = useState([])
  async function GetData (input)
   {
     console.log(input)
     let resp = await fetch(`${input}`)
     let data = await resp.json()
-    setReturned(data)
-    console.log(data)
-    console.log(returned)
+    let returned = data
       
   }
-  var API ="https://react-mvp-full.onrender.com/goals/main"
-
+  let API ="https://react-mvp-full.onrender.com/goals/main"
+  const BASE ="https://react-mvp-full.onrender.com/goals"
   useEffect(() => {
     GetData(API)
+    setMasterList(returned)
   }, [])
   
-  useEffect(() => {
-    console.log("Current returned", returned);
-  }, [returned]);
-
   return (
   
     <>
@@ -41,6 +37,7 @@ function App() {
         {masterList.map((master) => {
           return (
             <>
+            <Progress/>
             <div className='MAIN'>
           <h1>{master.Title}</h1>
           <div>
