@@ -13,7 +13,7 @@ function App() {
   const [returned, setReturned] = useState([])
   const GetData=async (input)=>
   {
-    let resp = await fetch(input)
+    let resp = await fetch(`${input}`)
     let data = await resp.json()
     setReturned(data)
       console.log(returned)
