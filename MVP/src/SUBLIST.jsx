@@ -6,7 +6,7 @@ function SUBLIST({subList, master}) {
         {subList.map((sub) => {
           return (
           <>
-            <SubR sub={sub} master={master}/>
+            <SubR sub={sub} master={master} key={sub.id}/>
             </>
           )
         })}

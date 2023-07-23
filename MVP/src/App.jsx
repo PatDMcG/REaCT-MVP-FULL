@@ -19,8 +19,11 @@ function App() {
   }
   useEffect(() => {
     GetData()
+    setMasterList(returned)
   }, [])
+  
   return (
+  
     <>
         
         {masterList.map((master) => {
