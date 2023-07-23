@@ -1,5 +1,7 @@
-import SubR from "./SubR"
 import { useState, useEffect } from 'react'
+
+import SubR from "./SubR"
+
 const [subList, setSubList] = useState([{Title: "test_1",Complete: true,Parent: 1}]) //{Title: "test_1",Complete: true,Parent: 1},{Title: "test_2",Complete: false,Parent: 1},{Title: "test_3",Complete: false,Parent: 2}
 
 
@@ -15,12 +17,16 @@ function SUBLIST({master}) {
   }
   let API ="https://react-mvp-full.onrender.com/goals/sub"
   const BASE ="https://react-mvp-full.onrender.com/goals"
-  useEffect(() => {
-    GetData2(API)
-  }, [])
+  // useEffect(() => {
+  //   GetData2(API)
+  // }, [])
 
     return (
-        <>
+<>
+      {useEffect(() => {
+        GetData2(API)
+      }, [])}
+        
         {subList.map((sub) => {
           return (
           <div className="SUBLIST">
