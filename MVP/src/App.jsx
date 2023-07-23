@@ -11,7 +11,7 @@ function App() {
   const [masterList, setMasterList] = useState([{Title: "Test",id: 1},{Title: "Test2",id: 2}])
   const [subList, setSubList] = useState([{Title: "test_1",Complete: true,Parent: 1},{Title: "test_2",Complete: false,Parent: 1},{Title: "test_3",Complete: false,Parent: 2}])
   const [returned, setReturned] = useState([])
-  const GetData=async (input)=>
+ async function GetData (input)
   {
     let resp = await fetch(`${input}`)
     let data = await resp.json()
