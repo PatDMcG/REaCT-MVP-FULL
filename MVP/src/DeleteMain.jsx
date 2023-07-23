@@ -4,6 +4,7 @@ function DeleteMain() {
     
     return (
         <>
+        <button>Delete</button>
         </>
     )
 }

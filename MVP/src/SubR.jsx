@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import DeleteSub from './DeleteSub'
+import UpdateSub from './UpdateSub'
 
 
 
@@ -9,7 +11,8 @@ function SubR({sub, master}) {
             <p>
             {sub.Title}
             </p>
-            <button>CRUD2</button>
+            <DeleteSub/>
+            <UpdateSub/>
             </div>
         )
     }

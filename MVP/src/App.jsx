@@ -4,6 +4,9 @@ import SUBLIST from './SUBLIST.jsx'
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 import './App.css'
+import DeleteMain from './DeleteMain.jsx'
+import UpdateMain from './UpdateMain.jsx'
+import NewSub from './NewSub.jsx'
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -13,16 +16,17 @@ function App() {
   const [returned, setReturned] = useState([])
  async function GetData (input)
   {
+    console.log(input)
     let resp = await fetch(`${input}`)
     let data = await resp.json()
     setReturned(data)
-      console.log(returned)
+    console.log(data)
+    console.log(returned)
       
   }
-  
+  var API ="https://react-mvp-full.onrender.com/goals/main"
 
   useEffect(() => {
-    var API ="https://react-mvp-full.onrender.com/goals/main"
     GetData(API)
   }, [])
   
@@ -35,9 +39,14 @@ function App() {
             <>
             <div className='MAIN'>
           <h1>{master.Title}</h1>
-          <button>CRUD</button>
+          <div>
+          <DeleteMain/>
+          <UpdateMain/>
+          </div>
+          
           </div>
           <SUBLIST subList={subList} master={master.id}/>
+          <NewSub/>
           </> )
         })}
         </>

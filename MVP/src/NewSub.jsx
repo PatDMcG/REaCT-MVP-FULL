@@ -4,6 +4,7 @@ function NewSub() {
     
     return (
         <>
+        <button>New Goal</button>
         </>
     )
 }

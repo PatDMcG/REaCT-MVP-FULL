@@ -4,6 +4,7 @@ function NewGoal() {
     
     return (
         <>
+        <button>New Goal</button>
         </>
     )
 }

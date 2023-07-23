@@ -4,6 +4,7 @@ function DeleteSub() {
     
     return (
         <>
+        <button>Delete</button>
         </>
     )
 }

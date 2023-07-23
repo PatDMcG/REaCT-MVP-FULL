@@ -4,6 +4,7 @@ function UpdateMain() {
     
     return (
         <>
+        <button>Update</button>
         </>
     )
 }
