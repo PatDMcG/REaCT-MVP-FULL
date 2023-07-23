@@ -5,18 +5,21 @@ const [subList, setSubList] = useState([]) //{Title: "test_1",Complete: true,Par
 
 
 function SUBLIST({master}) {
+  var returned = []
   async function GetData (input)
   {
     console.log(input)
-    let resp = await fetch(input)
+    let resp = await fetch(`${input}`)
     let data = await resp.json()
-    setSubList(data)
-      
+    response = data
+    console.log(response)
   }
   let API ="https://react-mvp-full.onrender.com/goals/sub"
   const BASE ="https://react-mvp-full.onrender.com/goals"
   useEffect(() => {
     GetData(API)
+    setSubList(returned)
+    console.log(subList)
   }, [])
 
     return (

@@ -19,15 +19,17 @@ function App() {
  async function GetData (input)
   {
     console.log(input)
-    let resp = await fetch(input)
+    let resp = await fetch(`${input}`)
     let data = await resp.json()
-    setMasterList(data)
-      
+    response = data
+    console.log(response)
   }
   let API ="https://react-mvp-full.onrender.com/goals/main"
   const BASE ="https://react-mvp-full.onrender.com/goals"
   useEffect(() => {
     GetData(API)
+    setMasterList(returned)
+    console.log(masterList)
   }, [])
   
   return (
