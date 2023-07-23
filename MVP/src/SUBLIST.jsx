@@ -5,7 +5,6 @@ const [subList, setSubList] = useState([{Title: "test_1",Complete: true,Parent: 
 
 
 function SUBLIST({master}) {
-  var returned = []
   async function GetData (input)
   {
     console.log(input)

@@ -7,7 +7,7 @@ import UpdateSub from './UpdateSub'
 function SubR({sub, master}) {
       if(sub.Parent == master)  
     return (
-      <div className='SUGOAL'>
+      <div className='SUBGOAL'>
             <p>
             {sub.Title}
             </p>
