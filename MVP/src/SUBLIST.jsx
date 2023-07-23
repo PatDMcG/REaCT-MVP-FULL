@@ -11,15 +11,13 @@ function SUBLIST({master}) {
     console.log(input)
     let resp = await fetch(`${input}`)
     let data = await resp.json()
-    response = data
-    console.log(response)
+    console.log(data)
+    setSubList(data)
   }
   let API ="https://react-mvp-full.onrender.com/goals/sub"
   const BASE ="https://react-mvp-full.onrender.com/goals"
   useEffect(() => {
     GetData(API)
-    setSubList(returned)
-    console.log(subList)
   }, [])
 
     return (
