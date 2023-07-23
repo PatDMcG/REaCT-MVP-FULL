@@ -5,7 +5,7 @@ const [subList, setSubList] = useState([{Title: "test_1",Complete: true,Parent: 
 
 
 function SUBLIST({master}) {
-  async function GetData (input)
+  async function GetData2 (input)
   {
     console.log(input)
     let resp = await fetch(`${input}`)
@@ -16,7 +16,7 @@ function SUBLIST({master}) {
   let API ="https://react-mvp-full.onrender.com/goals/sub"
   const BASE ="https://react-mvp-full.onrender.com/goals"
   useEffect(() => {
-    GetData(API)
+    GetData2(API)
   }, [])
 
     return (
