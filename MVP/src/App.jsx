@@ -26,18 +26,15 @@ function App() {
   }
   let API ="https://react-mvp-full.onrender.com/goals/main"
   const BASE ="https://react-mvp-full.onrender.com/goals"
-  // useEffect(() => {
-  //   GetData(API)
+  useEffect(() => {
+    GetData(API)
     
-  // }, [])
+  }, [])
   
   return (
-    <>
-    {useEffect(() => {
-      GetData(API)
-      
-    }, [])}
+  
     
+    <>
         <Title/>
         {masterList.map((master) => {
           return (
