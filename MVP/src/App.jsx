@@ -31,7 +31,8 @@ function App() {
     GetData(API)
     
   }, [])
-  
+  if(masterList)
+  {
   return (
   
     
@@ -56,6 +57,11 @@ function App() {
         })}
         </>
   )
+}
+else
+{
+return (<h1>FAILURE</h1>)
+}
 }
 
 export default App
