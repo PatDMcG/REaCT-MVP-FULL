@@ -30,6 +30,10 @@ function App() {
     GetData(API)
   }, [])
   
+  useEffect(() => {
+    console.log("Current returned", returned);
+  }, [returned]);
+
   return (
   
     <>
