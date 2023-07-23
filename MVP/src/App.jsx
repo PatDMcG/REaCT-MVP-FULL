@@ -15,14 +15,14 @@ function App() {
   {
     let resp = await fetch(input)
     let data = await resp.json()
-      console.log(data)
-      setReturned(data)
+    setReturned(data)
+      console.log(returned)
+      
   }
   setAPI("https://react-mvp-full.onrender.com/goals/main")
 
   useEffect(() => {
     GetData(API)
-    setMasterList(returned)
   }, [])
   
   return (
