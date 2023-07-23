@@ -1,7 +1,7 @@
-const { Pool } = require("pg");
-const express = require("express");
-const dotenv = require("dotenv");
-const path = require("path");
+import pkg from 'pg';
+const { Pool } = pkg;
+import express from "express";
+import dotenv from "dotenv";
 dotenv.config();
 const app = express();
 app.use(express.json());
@@ -169,5 +169,7 @@ app.post("/goals/sub/:id", async (req, res) => {
         
     }
 })
+
+app.listen(PORT, () => {console.log(`LISTENING on ${PORT}`)})
 
 
