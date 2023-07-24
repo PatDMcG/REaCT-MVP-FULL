@@ -12,9 +12,9 @@ function SubR({sub, master}) {
             <p>
             {sub.title}
             </p>
-            <Completed id={sub.id}/>
+            <Completed id={sub.id} master={master} sub={sub}/>
             <DeleteSub id={sub.id}/>
-            <UpdateSub id={sub.id} master={master} sub={sub.title}/>
+            <UpdateSub id={sub.id} master={master} sub={sub}/>
             </div>
         )
     }

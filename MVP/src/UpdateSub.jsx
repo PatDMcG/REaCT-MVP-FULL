@@ -20,11 +20,11 @@ function UpdateSub({id, master, sub}) {
               'Content-Type': 'application/json'
             },
             method: "PUT",
-            body: JSON.stringify({title: `${data.title}`, parent: data.parent})
+            body: JSON.stringify({title: `${data.title}`, complete: data.complete, parent: data.parent, })
         })
         let result = await resp.json()
         
-        setData({parent: master, title: sub})
+        setData({parent: master, complete: sub.complete , title: sub.title})
         console.log(result)
         
       }
