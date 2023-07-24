@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 
 
 function Progress({subList}) {
-  const [total, setTotal] = useState(0);
-  const [totalDone, setTotalDone] = useState(0);
+
+  let total = useRef();
+  let totalDone = useRef();
     if(subList)
     {
       let tot = 0
@@ -17,8 +18,8 @@ function Progress({subList}) {
             totaldone++
         }
     })
-    setTotal(tot)
-    setTotalDone(totaldone)
+    total = tot
+    TotalDone= totaldone
   }
   console.log(total, totalDone)
       const [percentage, setPercentage] = useState(0);
