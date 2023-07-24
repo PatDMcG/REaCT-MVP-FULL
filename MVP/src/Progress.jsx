@@ -3,26 +3,27 @@ import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 
 
-function Progress({subList}) {
-
+function Progress({subList, master}) {
+ 
   const total = useRef(0);
   const totalDone = useRef(0);
     if(subList)
     {
         subList.map((sub) => {
+          if(sub.parent == master){
           total.current = total.current + 1
         if(sub.complete == true)
         {
           totalDone.current = totalDone.current + 1
         }
-    })
+    }})
   }
   console.log(total.current, totalDone.current)
       const [percentage, setPercentage] = useState(0);
     
       useEffect(() => {
           if (percentage < 100) {
-            setPercentage(Math.floor(totalDone.current/total.current));
+            setPercentage((totalDone.current/total.current));
           }
       }, [percentage]);
     

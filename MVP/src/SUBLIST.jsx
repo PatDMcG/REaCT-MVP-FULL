@@ -6,7 +6,7 @@ import Progress from "./Progress"
 
 function SUBLIST({master}) {
 
-  const [subList, setSubList] = useState([{Title: "test_1",Complete: true,Parent: 1},{Title: "test_2",Complete: false,Parent: 1},{Title: "test_3",Complete: false,Parent: 2}]) //{Title: "test_1",Complete: true,Parent: 1},{Title: "test_2",Complete: false,Parent: 1},{Title: "test_3",Complete: false,Parent: 2}
+  const [subList, setSubList] = useState([]) //{Title: "test_1",Complete: true,Parent: 1},{Title: "test_2",Complete: false,Parent: 1},{Title: "test_3",Complete: false,Parent: 2}
 
   async function GetData2 (input)
   {
@@ -34,7 +34,7 @@ function SUBLIST({master}) {
 
       
         <>
-        <Progress subList={subList}/>
+        <Progress subList={subList} master={master} />
         {subList.map((sub) => (
          
           <div className="SUBLIST">
