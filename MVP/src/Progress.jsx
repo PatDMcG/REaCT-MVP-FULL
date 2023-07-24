@@ -7,6 +7,7 @@ function Progress({subList, master}) {
  
   const total = useRef(0);
   const totalDone = useRef(0);
+  const totalPercent = useRef(0);
     if(subList)
     {
         subList.map((sub) => {
@@ -23,8 +24,10 @@ function Progress({subList, master}) {
       let test = totalDone.current
       let test2 = total.current
       let test3= ((test/test2)*100)
+      totalPercent.current = test3
       console.log(test3, test2, test)
-      useEffect(() => {
+
+      useEffect( (test3) => {
          {
             
             setPercentage((test3));
