@@ -6,6 +6,11 @@
   background-color: #1b8dba;
 }
 
+.MAIN {
+  text-align: center;
+  color: lightslategray
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
