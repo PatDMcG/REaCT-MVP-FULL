@@ -32,6 +32,7 @@ function SUBLIST({master}) {
 
       
         <>
+        <Progress subList={subList}/>
         {subList.map((sub) => {
           return (
           <div className="SUBLIST">

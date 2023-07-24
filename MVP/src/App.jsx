@@ -47,7 +47,6 @@ function App() {
         {masterList.map((master) => {
           return (
             <>
-            <Progress/>
             <div className='MAIN' id={master.id}>
           <h1>{master.title}</h1>
           <div>

@@ -22,7 +22,7 @@ function NewGoal() {
         })
         let result = await resp.json()
        
-        setData("test")
+        //setData("test")
         console.log(result)
       };
 

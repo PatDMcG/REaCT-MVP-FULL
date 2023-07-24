@@ -4,6 +4,7 @@ import 'react-circular-progressbar/dist/styles.css';
 
 
 function Progress({SubList}) {
+    if(SubList){
     let totaldone = 0;
     let total = 0
     for(let i = 0; i < SubList.length; i++)
@@ -31,6 +32,7 @@ function Progress({SubList}) {
         </div>
       );
     }
+}
 
 
 export default Progress
