@@ -11,7 +11,7 @@ function UpdateMain({id, title}) {
 
       const handleSubmit = async (event) => {
         event.target.preventDefault()
-        let resp = fetch(`https://react-mvp-full.onrender.com/goals/main/${id}`,
+        let resp = await fetch(`https://react-mvp-full.onrender.com/goals/main/${id}`,
         {
             headers: {
               'Accept': 'application/json',
@@ -20,9 +20,10 @@ function UpdateMain({id, title}) {
             method: "PUT",
             body: JSON.stringify({title: data, id: id})
         })
-        let result = resp.json()
-        console.log(result)
+        let result = await resp.json()
+        
         setData(title)
+        console.log(result)
       };
 
     return (

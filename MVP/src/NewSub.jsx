@@ -10,7 +10,7 @@ function NewSub({master}) {
 
       const handleSubmit = async (event) => {
         event.target.preventDefault()
-        let resp = fetch("https://react-mvp-full.onrender.com/goals/sub",
+        let resp = await fetch("https://react-mvp-full.onrender.com/goals/sub",
         {
             headers: {
               'Accept': 'application/json',
@@ -19,9 +19,10 @@ function NewSub({master}) {
             method: "POST",
             body: JSON.stringify({title: data, parent: master})
         })
-        let result = resp.json()
-        console.log(result)
+        let result = await resp.json()
+        
         setData("test")
+        console.log(result)
       };
     return (
         <>

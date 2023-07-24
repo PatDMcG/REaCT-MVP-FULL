@@ -6,7 +6,7 @@ function DeleteSub({id}) {
     
     async function delet () 
     {
-        let resp = fetch(`https://react-mvp-full.onrender.com/goals/sub/${id}`,
+        let resp = await fetch(`https://react-mvp-full.onrender.com/goals/sub/${id}`,
         {
             headers: {
               'Accept': 'application/json',
@@ -14,7 +14,7 @@ function DeleteSub({id}) {
             },
             method: "DELETE",
         })
-        let result = resp.json()
+        let result = await resp.json()
         console.log(result)
     }
     return (

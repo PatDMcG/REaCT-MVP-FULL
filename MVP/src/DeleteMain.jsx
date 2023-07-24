@@ -6,7 +6,7 @@ function DeleteMain({id}) {
     
     async function delet () 
     {
-        let resp = fetch(`https://react-mvp-full.onrender.com/goals/main/${id}`,
+        let resp = await fetch(`https://react-mvp-full.onrender.com/goals/main/${id}`,
         {
             headers: {
               'Accept': 'application/json',
@@ -14,7 +14,7 @@ function DeleteMain({id}) {
             },
             method: "DELETE",
         })
-        let result = resp.json()
+        let result = await  resp.json()
         console.log(result)
     }
 

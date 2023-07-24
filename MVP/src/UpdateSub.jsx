@@ -11,7 +11,7 @@ function UpdateSub({id, master, sub}) {
 
       const handleSubmit = async (event) => {
         event.target.preventDefault()
-        let resp = fetch(`https://react-mvp-full.onrender.com/goals/sub/${id}`,
+        let resp = await fetch(`https://react-mvp-full.onrender.com/goals/sub/${id}`,
         {
             headers: {
               'Accept': 'application/json',
@@ -20,9 +20,10 @@ function UpdateSub({id, master, sub}) {
             method: "PUT",
             body: JSON.stringify({title: data.title, parent: data.parent, id: id})
         })
-        let result = resp.json()
-        console.log(result)
+        let result = await resp.json()
+        
         setData({parent: master, title: sub})
+        console.log(result)
       };
     return (
         <>
