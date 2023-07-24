@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 //   }, [])
 function UpdateSub({id, master, subTitle, complete}) {
     
-    const [data, setData] = useState({parent: master, title: subTitle})
+    const [data, setData] = useState({parent: master, complete: complete , title: subTitle})
     const handleChange = (event) => {
         setData(event.target.value);
       };
@@ -13,6 +13,7 @@ function UpdateSub({id, master, subTitle, complete}) {
         try {
           
         event.preventDefault()
+        setData({parent: master, complete: complete , title: subTitle})
         let resp = await fetch(`https://react-mvp-full.onrender.com/goals/sub/${id}`,
         {
             headers: {
@@ -24,7 +25,7 @@ function UpdateSub({id, master, subTitle, complete}) {
         })
         let result = await resp.json()
         
-        setData({parent: master, complete: complete , title: subTitle})
+        
         console.log(result)
         
       }

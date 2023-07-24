@@ -25,7 +25,7 @@ function Progress({subList}) {
     
       return (
         <div style={{textAlign:"center"}}>
-          <h4>Circular progress bar in React </h4>
+        <h4> Completion Rate </h4>
           <div style={{ width: 150, marginLeft: 550}}>
             <CircularProgressbar value={percentage} text={`${percentage}%`} />
           </div>
