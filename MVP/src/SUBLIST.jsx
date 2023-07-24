@@ -25,7 +25,7 @@ function SUBLIST({master}) {
   // useEffect(() => {
   //   setSubList([{title: "test_1",complete: true,parent: 1},{title: "test_2",complete: false,parent: 1},{title: "test_3",complete: false,parent: 2}])
   // }, [])
-  //<Progress subList={subList}/>
+  //
   
     if(subList)
     {
@@ -33,7 +33,7 @@ function SUBLIST({master}) {
 
       
         <>
-        
+        <Progress subList={subList}/>
         {subList.map((sub) => (
          
           <div className="SUBLIST">

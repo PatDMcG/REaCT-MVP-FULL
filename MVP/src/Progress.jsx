@@ -3,11 +3,11 @@ import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 
 
-function Progress({SubList}) {
-    if(SubList){
+function Progress({subList}) {
+    if(subList){
     let totaldone = 0;
     let total = 0
-    for(let i = 0; i < SubList.length; i++)
+    for(let i = 0; i < subList.length; i++)
     {
         total++
         if(sublist[i].complete)
