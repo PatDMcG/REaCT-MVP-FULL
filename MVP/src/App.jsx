@@ -44,8 +44,7 @@ function App() {
     <>
         <Title/>
       
-        {masterList.map((master) => {
-          return (
+        {masterList.map((master) => (
             <>
             <div className='MAIN' id={master.id}>
           <h1>{master.title}</h1>
@@ -57,8 +56,8 @@ function App() {
           </div>
           <SUBLIST master={master.id}/>
           <NewSub master={master.id}/>
-          </> )
-        })}
+          </> 
+        ))}
         </>
   )
 }

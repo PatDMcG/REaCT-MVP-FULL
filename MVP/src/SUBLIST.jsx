@@ -34,13 +34,13 @@ function SUBLIST({master}) {
       
         <>
         
-        {subList.map((sub) => {
-          return (
+        {subList.map((sub) => (
+         
           <div className="SUBLIST">
             <SubR sub={sub} master={master} key={sub.id}/>
             </div>
-          )
-        })}
+        ) 
+        )}
             </>
       )
 
