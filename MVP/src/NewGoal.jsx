@@ -23,6 +23,7 @@ function NewGoal() {
             method: "POST",
             body: JSON.stringify({title: `${data}`})
         })
+       
         let result = await resp.json()
        
         //setData("test")
