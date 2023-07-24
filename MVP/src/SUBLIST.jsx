@@ -35,6 +35,7 @@ function SUBLIST({master}) {
       
         <>
         <Progress subList={subList} master={master} />
+        <div className='card'>
         {subList.map((sub) => (
          
           <div className="SUBLIST">
@@ -42,6 +43,7 @@ function SUBLIST({master}) {
             </div>
         ) 
         )}
+        </div>
             </>
       )
 

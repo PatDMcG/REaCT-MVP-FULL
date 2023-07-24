@@ -28,7 +28,7 @@ function Progress({subList, master}) {
         <div style={{textAlign:"center"}}>
         <h4> Completion Rate </h4>
           <div style={{width: 150, marginRight: 550}}>
-            <CircularProgressbar className='progress' value={totalPercent.current } text={`${totalPercent.current }%`} />
+            <CircularProgressbar style={{color: 'darkcyan'}} value={totalPercent.current } text={`${totalPercent.current }%`} />
           </div>
         </div>
       );
