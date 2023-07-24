@@ -9,6 +9,10 @@ body
   text-align: center;
   background-color: #1b8dba;
 }
+.progress
+{
+  color:darkcyan
+}
 .button{
   background-color: bisque
 }
