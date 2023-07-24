@@ -156,7 +156,7 @@ app.put("/goals/sub/:id", async (req, res) => {
         }
         else
         {
-            res.status(400).message(`data inputed ${name} ${parent} ${completion}`)
+            res.status(400).json(`data inputed ${name} ${parent} ${completion}`)
         }
     } catch (error) {
 

@@ -5,15 +5,18 @@ import { useState, useEffect } from 'react'
 function UpdateSub({id, master, subTitle, complete}) {
     
     const [data, setData] = useState({parent: master, complete: complete , title: subTitle})
-    const handleChange = (event) => {
-        setData(event.target.value);
+    const handleChange1 = (event) => {
+        setData({parent: master, title: `${event.target.value}`, complete: complete});
+      };
+      const handleChange2 = (event) => {
+        setData({parent: event.target.value,complete: complete , title: subTitle});
       };
 
       const handleSubmit = async (event) => {
         try {
           
         event.preventDefault()
-        setData({parent: master, complete: complete , title: subTitle})
+        console.log(data)
         let resp = await fetch(`https://react-mvp-full.onrender.com/goals/sub/${id}`,
         {
             headers: {
@@ -38,9 +41,9 @@ function UpdateSub({id, master, subTitle, complete}) {
         <>
         <form onSubmit={handleSubmit}>Title
             <input
-          type="text" value={data.title} onChange={handleChange} />
+          type="text" value={data.title} onChange={handleChange1} />
           <input
-          type="text" value={data.parent} onChange={handleChange} />
+          type="text" value={data.parent} onChange={handleChange2} />
           <button className="button" type="submit">
           update
         </button>
