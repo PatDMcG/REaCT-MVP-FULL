@@ -5,21 +5,21 @@ import 'react-circular-progressbar/dist/styles.css';
 
 function Progress({subList}) {
 
-  let total = useRef();
-  let totalDone = useRef();
+  let total = useRef(0);
+  let totalDone = useRef(0);
     if(subList)
     {
       total = 0
       totalDone = 0
         subList.map((sub) => {
         total++
-        if(sub.complete)
+        if(sub.complete == true)
         {
             totalDone++
         }
     })
   }
-  console.log(total.current, totalDone.current)
+  console.log(total, totalDone)
       const [percentage, setPercentage] = useState(0);
     
       useEffect(() => {
