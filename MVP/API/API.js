@@ -159,7 +159,7 @@ app.put("/goals/sub/:id", async (req, res) => {
         }
         if(parent !== null)
         {
-            let data = await pool.query(`update SubGoals set Parent = '$1 where id =  $2 returning *;` , [name,id])
+            let data = await pool.query(`update SubGoals set Parent = $1 where id =  $2 returning *;` , [name,id])
         }
          
         res.status(200).json(data.rows)
