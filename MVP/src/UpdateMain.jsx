@@ -20,7 +20,7 @@ function UpdateMain({id, title}) {
               'Content-Type': 'application/json'
             },
             method: "PUT",
-            body: JSON.stringify({title: data, id: id})
+            body: JSON.stringify({title: `${data}`, id: id})
         })
         let result = await resp.json()
         
