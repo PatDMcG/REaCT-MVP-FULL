@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 //   }, [])
 function UpdateSub({id, master, subTitle, complete}) {
     
-    const [data, setData] = useState({parent: master, title: sub})
+    const [data, setData] = useState({parent: master, title: subTitle})
     const handleChange = (event) => {
         setData(event.target.value);
       };
