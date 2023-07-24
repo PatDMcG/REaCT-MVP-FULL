@@ -1,6 +1,6 @@
-function Completed({id}) {
+function Completed({id,master, subTitle}) {
     
-    async function complete ({master, subTitle}) 
+    async function complete () 
     {
         try {
           
