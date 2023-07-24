@@ -10,12 +10,12 @@ function Progress({subList}) {
     if(subList)
     {
       total = 0
-      totaldone = 0
+      totalDone = 0
         subList.map((sub) => {
         total++
         if(sub.complete)
         {
-            totaldone++
+            totalDone++
         }
     })
   }
