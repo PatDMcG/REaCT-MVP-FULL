@@ -21,7 +21,7 @@ function NewGoal() {
               'Content-Type': 'application/json'
             },
             method: "POST",
-            body: JSON.stringify({title: data})
+            body: JSON.stringify({title: `${data}`})
         })
         let result = await resp.json()
        

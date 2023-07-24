@@ -19,7 +19,7 @@ function NewSub({master}) {
               'Content-Type': 'application/json'
             },
             method: "POST",
-            body: JSON.stringify({title: data, parent: master})
+            body: JSON.stringify({title: `${data}`, parent: `${master}`})
         })
         let result = await resp.json()
         
