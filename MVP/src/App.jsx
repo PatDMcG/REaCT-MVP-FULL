@@ -30,7 +30,7 @@ function App() {
   useEffect(() => {
     GetData(API)
     
-  }, [])
+  }, [masterList])
   // useEffect(() => {
   //   setMasterList([{title: "Test",id: 1},{title: "Test2",id: 2}])
     

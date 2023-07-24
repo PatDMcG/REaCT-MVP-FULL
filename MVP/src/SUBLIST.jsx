@@ -21,7 +21,7 @@ function SUBLIST({master}) {
   const BASE ="https://react-mvp-full.onrender.com/goals"
   useEffect(() => {
     GetData2(API)
-  }, [])
+  }, [subList])
 
   // useEffect(() => {
   //   setSubList([{title: "test_1",complete: true,parent: 1},{title: "test_2",complete: false,parent: 1},{title: "test_3",complete: false,parent: 2}])
