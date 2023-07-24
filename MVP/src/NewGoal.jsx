@@ -10,6 +10,9 @@ function NewGoal() {
       };
 
       const handleSubmit = async (event) => {
+        try {
+          
+       
         event.target.preventDefault()
         let resp = await fetch("https://react-mvp-full.onrender.com/goals/main",
         {
@@ -24,7 +27,12 @@ function NewGoal() {
        
         //setData("test")
         console.log(result)
-      };
+      }
+       catch (error) {
+        console.log(error)
+          
+      }
+    };
 
       
 
