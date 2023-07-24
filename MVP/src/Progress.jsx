@@ -21,14 +21,14 @@ function Progress({subList, master}) {
       let test = totalDone.current
       let test2 = total.current
       let test3= ((test/test2)*100)
-      totalPercent.current = test3
+      totalPercent.current = Math.floor(test3)
       console.log(test3, test2, test)
     
       return (
         <div style={{textAlign:"center"}}>
         <h4> Completion Rate </h4>
           <div style={{ width: 150, marginLeft: 550}}>
-            <CircularProgressbar value={test3} text={`${test3}%`} />
+            <CircularProgressbar value={totalPercent.current } text={`${totalPercent.current }%`} />
           </div>
         </div>
       );
