@@ -29,9 +29,9 @@ function Progress({subList, master}) {
         <h4> Completion Rate </h4>
           <div style={{ width: 150, marginRight: 550}}>
             <CircularProgressbar value={totalPercent.current } text={`${totalPercent.current }%`} 
-            styles={buildStyles({ pathColor: `rgba(62, 152, 199, ${totalPercent.current / 100})`,
+            styles={buildStyles({ pathColor: `rgba(54, 39, 245, ${totalPercent.current / 100})`,
     textColor: 'black',
-    trailColor: 'blue',
+    trailColor: 'slateblue',
     backgroundColor: '#3e98c7'})}/>
           </div>
         </div>
