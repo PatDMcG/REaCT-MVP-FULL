@@ -20,13 +20,13 @@ function Progress({subList, master}) {
   }
   console.log(total.current, totalDone.current)
       const [percentage, setPercentage] = useState(0);
-    
+      let test = totalDone.current
+      let test2 = total.current
+      let test3= ((test/test2)*100)
+      console.log(test3, test2, test)
       useEffect(() => {
          {
-            let test = totalDone.current
-            let test2 = total.current
-            let test3= ((test/test2)*100)
-            console.log(test3, test2, test)
+            
             setPercentage((test3));
           }
       }, [percentage]);
