@@ -134,7 +134,7 @@ app.put("/goals/main/:id", async (req, res) => {
     }
 })
 //update one Sub
-app.post("/goals/sub/:id", async (req, res) => {
+app.put("/goals/sub/:id", async (req, res) => {
     try {
         let id = req.params.id
         let parent = req.body.parent;
