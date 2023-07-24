@@ -23,20 +23,12 @@ function Progress({subList, master}) {
       let test3= ((test/test2)*100)
       totalPercent.current = test3
       console.log(test3, test2, test)
-      
-      useEffect( () => {
-         {
-          console.log("hello")
-            console.log(totalPercent.current)
-            setPercentage((test3));
-          }
-      }, []);
     
       return (
         <div style={{textAlign:"center"}}>
         <h4> Completion Rate </h4>
           <div style={{ width: 150, marginLeft: 550}}>
-            <CircularProgressbar value={percentage} text={`${percentage}%`} />
+            <CircularProgressbar value={test3} text={`${test3}%`} />
           </div>
         </div>
       );
