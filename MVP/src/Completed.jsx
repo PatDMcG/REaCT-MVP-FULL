@@ -11,7 +11,7 @@ function Completed({id,master, subTitle}) {
               'Content-Type': 'application/json'
             },
             method: "PUT",
-            body: JSON.stringify({parent: master, complete: true , title: subTitle})
+            body: JSON.stringify({parent: master, complete: true , title: `${subTitle}`})
         })
         let result = await resp.json()
         console.log(result)
