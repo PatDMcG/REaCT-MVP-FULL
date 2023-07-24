@@ -7,12 +7,12 @@ import UpdateSub from './UpdateSub'
 function SubR({sub, master}) {
       if(sub.parent == master)  
     return (
-      <div className='SUBGOAL'>
+      <div className='SUBGOAL' id={sub.id}>
             <p>
             {sub.title}
             </p>
-            <DeleteSub/>
-            <UpdateSub/>
+            <DeleteSub id={sub.id}/>
+            <UpdateSub id={sub.id} master={master} sub={sub.title}/>
             </div>
         )
     }

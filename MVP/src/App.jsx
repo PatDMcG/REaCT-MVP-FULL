@@ -31,6 +31,11 @@ function App() {
     GetData(API)
     
   }, [])
+  // useEffect(() => {
+  //   setMasterList([{title: "Test",id: 1},{title: "Test2",id: 2}])
+    
+// }, [])
+
   if(masterList)
   {
   return (
@@ -43,16 +48,16 @@ function App() {
           return (
             <>
             <Progress/>
-            <div className='MAIN'>
+            <div className='MAIN' id={master.id}>
           <h1>{master.title}</h1>
           <div>
-          <DeleteMain/>
-          <UpdateMain/>
+          <DeleteMain id={master.id}/>
+          <UpdateMain title={master.title} id={master.id}/>
           </div>
           
           </div>
           <SUBLIST master={master.id}/>
-          <NewSub/>
+          <NewSub master={master.id}/>
           </> )
         })}
         </>

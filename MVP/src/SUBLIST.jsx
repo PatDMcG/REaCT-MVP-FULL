@@ -5,7 +5,7 @@ import SubR from "./SubR"
 
 function SUBLIST({master}) {
 
-  const [subList, setSubList] = useState([]) //{Title: "test_1",Complete: true,Parent: 1},{Title: "test_2",Complete: false,Parent: 1},{Title: "test_3",Complete: false,Parent: 2}
+  const [subList, setSubList] = useState([{Title: "test_1",Complete: true,Parent: 1},{Title: "test_2",Complete: false,Parent: 1},{Title: "test_3",Complete: false,Parent: 2}]) //{Title: "test_1",Complete: true,Parent: 1},{Title: "test_2",Complete: false,Parent: 1},{Title: "test_3",Complete: false,Parent: 2}
 
   async function GetData2 (input)
   {
@@ -21,6 +21,11 @@ function SUBLIST({master}) {
   useEffect(() => {
     GetData2(API)
   }, [])
+
+  // useEffect(() => {
+  //   setSubList([{title: "test_1",complete: true,parent: 1},{title: "test_2",complete: false,parent: 1},{title: "test_3",complete: false,parent: 2}])
+  // }, [])
+  
     if(subList)
     {
     return (
