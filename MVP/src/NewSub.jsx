@@ -11,7 +11,7 @@ function NewSub({master}) {
       const handleSubmit = async (event) => {
         try {
           
-        event.target.preventDefault()
+        event.preventDefault()
         let resp = await fetch("https://react-mvp-full.onrender.com/goals/sub",
         {
             headers: {
@@ -23,7 +23,7 @@ function NewSub({master}) {
         })
         let result = await resp.json()
         
-        setData("test")
+        //setData("test")
         console.log(result)
       }
       catch (error) {

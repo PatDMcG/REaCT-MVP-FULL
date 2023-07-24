@@ -12,7 +12,7 @@ function UpdateSub({id, master, sub}) {
       const handleSubmit = async (event) => {
         try {
           
-        event.target.preventDefault()
+        event.preventDefault()
         let resp = await fetch(`https://react-mvp-full.onrender.com/goals/sub/${id}`,
         {
             headers: {
