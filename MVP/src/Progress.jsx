@@ -6,6 +6,8 @@ import 'react-circular-progressbar/dist/styles.css';
 function Progress({subList}) {
     if(subList)
     {
+      let total = 0
+      let totaldone = 0
         subList.map((sub) => {
         total++
         if(sub.complete)
@@ -18,7 +20,7 @@ function Progress({subList}) {
     
       useEffect(() => {
           if (percentage < 100) {
-            setPercentage(totaldone/total);
+            setPercentage(Math.floor(totaldone/total));
           }
       }, [percentage]);
     
