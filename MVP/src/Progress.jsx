@@ -1,9 +1,10 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { CircularProgressbar } from 'react-circular-progressbar';
-import 'react-circular-progressbar/dist/styles.css';
+import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 
 
 function Progress({subList, master}) {
+
+  buildStyles(({ rotation, strokeLinecap, textColor: 'darkcyan', textSize, pathColor, pathTransition, pathTransitionDuration, trailColor: 'darkcyan', backgroundColor }))
  
   const total = useRef(0);
   const totalDone = useRef(0);
@@ -28,7 +29,7 @@ function Progress({subList, master}) {
         <div style={{textAlign:"center"}}>
         <h4> Completion Rate </h4>
           <div style={{width: 150, marginRight: 550}}>
-            <CircularProgressbar style={{color: 'darkcyan'}} value={totalPercent.current } text={`${totalPercent.current }%`} />
+            <CircularProgressbar value={totalPercent.current } text={`${totalPercent.current }%`} />
           </div>
         </div>
       );
