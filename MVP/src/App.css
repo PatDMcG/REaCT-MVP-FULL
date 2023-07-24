@@ -1,3 +1,7 @@
+body
+{
+  background-color: skyblue;
+}
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -5,10 +9,17 @@
   text-align: center;
   background-color: #1b8dba;
 }
-
+.button{
+  background-color: bisque
+}
+.button:hover
+{
+  background-color: #61dafbaa
+}
 .MAIN {
+    flex-direction: row ;
   text-align: center;
-  color: lightslategray
+  color: rgb(34, 39, 44)
 }
 
 .logo {
@@ -23,7 +34,6 @@
 input[type="button"].react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
-
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);

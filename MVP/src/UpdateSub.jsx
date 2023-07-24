@@ -32,7 +32,7 @@ function UpdateSub({id, master, sub}) {
           type="text" value={data.title} onChange={handleChange} />
           <input
           type="text" value={data.parent} onChange={handleChange} />
-          <button type="submit">
+          <button className="button" type="submit">
           update
         </button>
         </form>

@@ -31,7 +31,7 @@ function UpdateMain({id, title}) {
         <form onSubmit={handleSubmit}>Title
             <input
           type="text" value={data} onChange={handleChange} />
-          <button type="submit">
+          <button className="button" type="submit">
           Update
         </button>
         </form>

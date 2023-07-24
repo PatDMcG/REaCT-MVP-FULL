@@ -20,7 +20,7 @@ function DeleteMain({id}) {
 
     return (
         <>
-        <button onClick={delet}>Delete</button>
+        <button onClick={delet} className="button">Delete</button>
         </>
     )
 }
