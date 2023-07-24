@@ -10,6 +10,8 @@ function UpdateSub({id, master, sub}) {
       };
 
       const handleSubmit = async (event) => {
+        try {
+          
         event.target.preventDefault()
         let resp = await fetch(`https://react-mvp-full.onrender.com/goals/sub/${id}`,
         {
@@ -24,7 +26,13 @@ function UpdateSub({id, master, sub}) {
         
         setData({parent: master, title: sub})
         console.log(result)
+        
+      }
+      catch (error) {
+        console.log(error)
+          
       };
+    }
     return (
         <>
         <form onSubmit={handleSubmit}>Title
@@ -38,6 +46,7 @@ function UpdateSub({id, master, sub}) {
         </form>
         </>
     )
+    
 }
 
 

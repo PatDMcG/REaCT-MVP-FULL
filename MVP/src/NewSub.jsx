@@ -9,6 +9,8 @@ function NewSub({master}) {
       };
 
       const handleSubmit = async (event) => {
+        try {
+          
         event.target.preventDefault()
         let resp = await fetch("https://react-mvp-full.onrender.com/goals/sub",
         {
@@ -23,7 +25,12 @@ function NewSub({master}) {
         
         setData("test")
         console.log(result)
-      };
+      }
+      catch (error) {
+        console.log(error)
+          
+      }
+    };
     return (
         <>
         <form onSubmit={handleSubmit}>Title
@@ -35,6 +42,7 @@ function NewSub({master}) {
         </form>
         </>
     )
+    
 }
 
 

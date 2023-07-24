@@ -10,6 +10,8 @@ function UpdateMain({id, title}) {
       };
 
       const handleSubmit = async (event) => {
+        try {
+          
         event.target.preventDefault()
         let resp = await fetch(`https://react-mvp-full.onrender.com/goals/main/${id}`,
         {
@@ -24,7 +26,12 @@ function UpdateMain({id, title}) {
         
         setData(title)
         console.log(result)
-      };
+      }
+      catch (error) {
+        console.log(error)
+          
+      }
+    };
 
     return (
         <>
@@ -37,6 +44,7 @@ function UpdateMain({id, title}) {
         </form>
         </>
     )
+    
 }
 
 
