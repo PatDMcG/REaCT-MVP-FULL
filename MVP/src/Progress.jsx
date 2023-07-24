@@ -29,7 +29,7 @@ function Progress({subList, master}) {
 
       useEffect( (test3) => {
          {
-            
+            console.log(totalPercent.current)
             setPercentage((test3));
           }
       }, [percentage]);
