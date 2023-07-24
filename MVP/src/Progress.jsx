@@ -9,24 +9,22 @@ function Progress({subList}) {
   let totalDone = useRef();
     if(subList)
     {
-      let tot = 0
-      let totaldone = 0
+      total = 0
+      totaldone = 0
         subList.map((sub) => {
-        tot++
+        total++
         if(sub.complete)
         {
             totaldone++
         }
     })
-    total = tot
-    TotalDone= totaldone
   }
-  console.log(total, totalDone)
+  console.log(total.current, totalDone.current)
       const [percentage, setPercentage] = useState(0);
     
-      useEffect((total, totalDone) => {
+      useEffect(() => {
           if (percentage < 100) {
-            setPercentage(Math.floor(totalDone/total));
+            setPercentage(Math.floor(totalDone.current/total.current));
           }
       }, [percentage]);
     
