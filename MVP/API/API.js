@@ -98,7 +98,7 @@ app.delete("/goals/sub/:id", async (req, res) => {
 app.post("/goals/main", async (req, res) => {
     try {
         let name = req.body.title;
-        let data = await pool.query(`insert into MainGoals(Title) values ('$1') returning *;`, [name] ) 
+        let data = await pool.query(`insert into MainGoals(Title) values ($1) returning *;`, [name] ) 
         res.status(200).json(data.rows)
     } catch (error) {
 
@@ -111,7 +111,7 @@ app.post("/goals/sub", async (req, res) => {
     try {
         let parent = req.body.parent;
         let name = req.body.title;
-        let data = await pool.query("insert into SubGoals(Title,Complete,Parent) values (`$1`,false,$2) returning *;" , [name,parent]) 
+        let data = await pool.query("insert into SubGoals(Title,Complete,Parent) values ($1,false,$2) returning *;" , [name,parent]) 
         res.status(200).json(data.rows)
     } catch (error) {
 
@@ -125,7 +125,7 @@ app.put("/goals/main/:id", async (req, res) => {
     try {
         let id = req.params.id
         let name = req.body.title;
-        let data = await pool.query(`set MainGoals Title = '$1' where id = $2 returning *;`, [name,id] ) 
+        let data = await pool.query(`update MainGoals set Title = $1 where id = $2 returning *;`, [name,id] ) 
         res.status(200).json(data.rows)
     } catch (error) {
 
@@ -151,15 +151,15 @@ app.post("/goals/sub/:id", async (req, res) => {
           }
         if(name !== null)
         {
-            let data = await pool.query("update SubGoals set Title = '$1' where  id = $2 returning *;" , [name,id])
+            let data = await pool.query("update SubGoals set Title = $1 where  id = $2 returning *;" , [name,id])
         }
         if(completion !== null)
         {
-            let data = await pool.query("update SubGoals set Title = '$1' where id = $2 returning *;" , [name,id])
+            let data = await pool.query("update SubGoals set Title = $1 where id = $2 returning *;" , [name,id])
         }
         if(parent !== null)
         {
-            let data = await pool.query("update SubGoals set Parent = '$1' where id =  $2 returning *;" , [name,id])
+            let data = await pool.query("update SubGoals set Parent = '$1 where id =  $2 returning *;" , [name,id])
         }
          
         res.status(200).json(data.rows)
