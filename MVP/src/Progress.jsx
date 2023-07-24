@@ -10,7 +10,7 @@ function Progress({subList}) {
     for(let i = 0; i < subList.length; i++)
     {
         total++
-        if(sublist[i].complete)
+        if(subList[i].complete)
         {
             totaldone++
         }
