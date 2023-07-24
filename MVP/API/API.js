@@ -151,7 +151,7 @@ app.put("/goals/sub/:id", async (req, res) => {
           }
         if(name !== null && parent !== null && completion !== null)
         {
-            let data = await pool.query(`update SubGoals set Title = $1 set Complete = $3 set Parent = $4 where  id = $2 returning *;` , [name,id,completion,parent])
+            let data = await pool.query(`update SubGoals set Title = $1, Complete = $3, Parent = $4 where id = $2 returning *;` , [name,id,completion,parent])
         }
          
         res.status(200).json(data.rows)
