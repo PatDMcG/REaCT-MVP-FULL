@@ -1,6 +1,6 @@
 function Completed({id}) {
     
-    async function complete ({master, sub}) 
+    async function complete ({master, subTitle}) 
     {
         try {
           
@@ -11,7 +11,7 @@ function Completed({id}) {
               'Content-Type': 'application/json'
             },
             method: "PUT",
-            body: JSON.stringify({parent: master, complete: true , title: sub.title})
+            body: JSON.stringify({parent: master, complete: true , title: subTitle})
         })
         let result = await resp.json()
         console.log(result)

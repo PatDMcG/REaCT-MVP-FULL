@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 // useEffect(() => {
 //     GetData(API)
 //   }, [])
-function UpdateSub({id, master, sub}) {
+function UpdateSub({id, master, subTitle, complete}) {
     
     const [data, setData] = useState({parent: master, title: sub})
     const handleChange = (event) => {
@@ -24,7 +24,7 @@ function UpdateSub({id, master, sub}) {
         })
         let result = await resp.json()
         
-        setData({parent: master, complete: sub.complete , title: sub.title})
+        setData({parent: master, complete: complete , title: subTitle})
         console.log(result)
         
       }
