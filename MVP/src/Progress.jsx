@@ -22,8 +22,10 @@ function Progress({subList, master}) {
       const [percentage, setPercentage] = useState(0);
     
       useEffect(() => {
-          if (percentage < 100) {
-            setPercentage((totalDone.current/total.current));
+         {
+            let test = (totalDone.current/total.current)*100
+            console.log(test)
+            setPercentage((test));
           }
       }, [percentage]);
     
